@@ -1,2 +1,2 @@
 # Capstone
-IOS App Captone Project
+iOS App Captone Project

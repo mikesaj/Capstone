@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  MapsViewController.swift
 //  capstone
 //
 //  Created by Joohyung Ryu on 2017. 1. 24..
-//  Copyright © 2017년 MSD. All rights reserved.
+//  Copyright © 2017 MSD. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MapsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

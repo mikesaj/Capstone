@@ -25,11 +25,38 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var logLocation: UIButton!
 
     // MARK: Variables
+    // Location manager
+    var locationManager: CLLocationManager!
+    // Empty CLLocation array for path drawing
+    var userLocations: Array<CLLocation> = Array()
 
     // MARK: viewDidLoad
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        // Initialize location manager
+        // Crate CLLocationManager object
+        locationManager = CLLocationManager()
+        // Delegate to self
+        locationManager.delegate = self
+        // Use best accuracy
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        // Request location use permission
+        locationManager.requestWhenInUseAuthorization()
+        // Start updating location and heading
+        locationManager.startUpdatingLocation()
+        locationManager.startUpdatingHeading()
+
+        // Initialize map
+        // Delegate to self
+        locationMap.delegate = self
+        // Use standard map type
+        locationMap.mapType = .standard
+        // Display the user’s location
+        locationMap.showsUserLocation = true
+        // The map follows the user location and rotates when the heading changes
+        locationMap.userTrackingMode = .followWithHeading
     }
 
     // MARK: Action

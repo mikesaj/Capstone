@@ -60,7 +60,38 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
 
     // MARK: Action
+    // Logging button action, set (sender: AnyObject) to change button title
     @IBAction func logLocation(_ sender: AnyObject) {
 
+        // Button strings: "Start", "Stop"
+        let startStr: String = NSLocalizedString("log_btn_start", comment: "Start")
+        let stopStr: String = NSLocalizedString("log_btn_stop", comment: "Stop")
+
+        // Start logging
+        func startLogging() {
+
+            // Change button title
+            sender.setTitle(stopStr, for: .normal)
+
+        }
+
+        // Stop logging
+        func stopLogging() {
+
+            // Change button title
+            sender.setTitle(startStr, for: .normal)
+        }
+
+        // Change logging status by button title
+        switch (sender.currentTitle as String!) {
+            case startStr:
+                // When "Start" tapped
+                startLogging()
+            case stopStr:
+                // When "Stop" tapped
+                stopLogging()
+            default:
+                break
+        }
     }
 }

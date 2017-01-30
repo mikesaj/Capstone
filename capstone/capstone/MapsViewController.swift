@@ -90,6 +90,9 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             // Stop tracking user
             locationMap.userTrackingMode = .none
 
+            // Clear location data
+            userLocations.removeAll()
+
             // Change button title
             sender.setTitle(startStr, for: .normal)
 
@@ -142,6 +145,41 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         if let lastLocation = locations.last {
             // Show location data on the label
             locationData.text = "\(lastLocation)"
+            // Append the data to userLocations Array
+            userLocations.append(lastLocation)
         }
+
+        // Make user route as polyline
+        // Check the array has 2 elements to draw a line
+        if (userLocations.count > 1) {
+            // Create coordinates from current and last location data
+            if let newCoordinate: CLLocationCoordinate2D = userLocations.last?.coordinate,
+               let oldCoordinate: CLLocationCoordinate2D = userLocations.first?.coordinate {
+                // Create coordinates array for MKPolyline
+                let coords = [newCoordinate, oldCoordinate]
+                // Create MKPolyline object from the specified set of coordinates
+                let polyline: MKPolyline = MKPolyline(coordinates: coords, count: coords.count)
+
+                // Add the polyline as single overlay object to the map
+                locationMap.add(polyline)
+
+                // Remove the first element to limit size of the array
+                userLocations.removeFirst()
+            }
+        }
+    }
+
+    // MARK: MKMapViewDelegate
+    // Ask the delegate for a renderer object to use when drawing the specified overlay
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+
+        // Initialize and return a new overlay view using the specified polyline overlay object
+        let polylineRenderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        // Set stroke line colour
+        polylineRenderer.strokeColor = UIColor.blue
+        // Set stroke line width
+        polylineRenderer.lineWidth = 4
+
+        return polylineRenderer
     }
 }

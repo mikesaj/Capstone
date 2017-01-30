@@ -29,6 +29,8 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var locationManager: CLLocationManager!
     // Empty CLLocation array for path drawing
     var userLocations: Array<CLLocation> = Array()
+    // CoreLocation permission status
+    var locationAuthStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
 
     // MARK: viewDidLoad
     override func viewDidLoad() {
@@ -63,6 +65,11 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
 
         // Start logging
         func startLogging() {
+
+            // Request permission
+            if locationAuthStatus == .notDetermined {
+                locationManager.requestWhenInUseAuthorization()
+            }
 
             // Start updating location and heading
             locationManager.startUpdatingLocation()
@@ -110,8 +117,8 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Check the status
         switch status {
             case .notDetermined:
-                // Ask permission when the auth is not determined
-                locationManager.requestWhenInUseAuthorization()
+                // Do nothing until 'Start' button is tapped
+                break
             case .authorizedWhenInUse, .authorizedAlways:
                 // Set instruction when it is granted
                 locationData.text = NSLocalizedString("start_inst", comment: "Start instruction")
@@ -128,9 +135,13 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     // Tell the delegate that new location data is available
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
-        // Display the user’s location
-        locationMap.showsUserLocation = true
         // The map follows the user location and rotates when the heading changes
         locationMap.userTrackingMode = .followWithHeading
+
+        // Get current location data
+        if let lastLocation = locations.last {
+            // Show location data on the label
+            locationData.text = "\(lastLocation)"
+        }
     }
 }

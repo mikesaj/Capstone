@@ -130,7 +130,7 @@
                                             <segue destination="BYZ-38-t0r" kind="showDetail" id="O3h-I0-jFC"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Data Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94m-uN-MTi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Data Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94m-uN-MTi">
                                         <rect key="frame" x="60" y="0.0" width="255" height="80"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                         <nil key="textColor"/>

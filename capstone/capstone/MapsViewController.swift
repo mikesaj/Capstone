@@ -51,6 +51,17 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Use standard map type
         locationMap.mapType = .standard
 
+        // Centre map with location at launch
+        // Get location, span, and region when it is possible
+        if let initLocation = locationManager.location {
+            let initCoordinates: CLLocationCoordinate2D = initLocation.coordinate
+            let initSpan: MKCoordinateSpan = MKCoordinateSpanMake(0.014, 0.014)
+            let initRegion: MKCoordinateRegion = MKCoordinateRegionMake(initCoordinates, initSpan)
+
+            // Set initial region on the map
+            locationMap.setRegion(initRegion, animated: true)
+        }
+
         // Display the user’s location
         locationMap.showsUserLocation = true
     }

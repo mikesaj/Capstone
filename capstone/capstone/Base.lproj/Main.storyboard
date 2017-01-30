@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Maps View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapsViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,6 +51,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65r-Mq-3fO">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
                                                 <state key="normal" title="Maps"/>
+                                                <connections>
+                                                    <segue destination="cVm-WB-wkq" kind="showDetail" action="showViewController:sender:" id="GGA-90-c4J"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rr-Js-dHQ">
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="30"/>
@@ -98,6 +101,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="MtS-7m-Ea0">
+            <objects>
+                <viewController id="cVm-WB-wkq" customClass="MapsViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ViV-VQ-d4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="y2z-dJ-Upg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="llY-Ig-RoP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MapsViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgw-3F-Exq">
+                                <rect key="frame" x="110" y="323" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fgw-3F-Exq" firstAttribute="centerX" secondItem="llY-Ig-RoP" secondAttribute="centerX" id="ai0-3Q-MMa"/>
+                            <constraint firstItem="Fgw-3F-Exq" firstAttribute="centerY" secondItem="llY-Ig-RoP" secondAttribute="centerY" id="yP5-SK-Qrd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P0L-ek-XOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="799"/>
         </scene>
     </scenes>
 </document>

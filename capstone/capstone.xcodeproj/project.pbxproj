@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991621E37BC1100036F12 /* AppDelegate.swift */; };
-		A91991651E37BC1100036F12 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* MapsViewController.swift */; };
+		A91991651E37BC1100036F12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* MainViewController.swift */; };
 		A91991681E37BC1100036F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91991661E37BC1100036F12 /* Main.storyboard */; };
 		A919916A1E37BC1100036F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91991691E37BC1100036F12 /* Assets.xcassets */; };
 		A919916D1E37BC1100036F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */; };
 		A91991781E37BC1100036F12 /* capstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991771E37BC1100036F12 /* capstoneTests.swift */; };
+		A9C655801E3EC4C8004ECCBD /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */; };
 		A9FB15231E3E956800A1EA91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB15221E3E956800A1EA91 /* MapKit.framework */; };
 		A9FB15251E3E957900A1EA91 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB15241E3E957900A1EA91 /* CoreLocation.framework */; };
 		A9FB15271E3E964600A1EA91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9FB15261E3E964600A1EA91 /* Localizable.strings */; };
@@ -31,7 +32,7 @@
 /* Begin PBXFileReference section */
 		A919915F1E37BC1100036F12 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91991621E37BC1100036F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A91991641E37BC1100036F12 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		A91991641E37BC1100036F12 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A91991671E37BC1100036F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A91991691E37BC1100036F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A919916C1E37BC1100036F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 		A91991731E37BC1100036F12 /* capstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91991771E37BC1100036F12 /* capstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capstoneTests.swift; sourceTree = "<group>"; };
 		A91991791E37BC1100036F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A9FB15221E3E956800A1EA91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9FB15241E3E957900A1EA91 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9FB15261E3E964600A1EA91 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -109,7 +111,8 @@
 		A9FB15201E3E94AE00A1EA91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A91991641E37BC1100036F12 /* MapsViewController.swift */,
+				A91991641E37BC1100036F12 /* MainViewController.swift */,
+				A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -234,7 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91991651E37BC1100036F12 /* MapsViewController.swift in Sources */,
+				A9C655801E3EC4C8004ECCBD /* MapsViewController.swift in Sources */,
+				A91991651E37BC1100036F12 /* MainViewController.swift in Sources */,
 				A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,15 +42,15 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         locationManager.delegate = self
         // Use best accuracy
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        // Start updating location and heading
-        locationManager.startUpdatingLocation()
-        locationManager.startUpdatingHeading()
 
         // Initialize map
         // Delegate to self
         locationMap.delegate = self
         // Use standard map type
         locationMap.mapType = .standard
+
+        // Display the user’s location
+        locationMap.showsUserLocation = true
     }
 
     // MARK: Action
@@ -64,6 +64,10 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Start logging
         func startLogging() {
 
+            // Start updating location and heading
+            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
+
             // Change button title
             sender.setTitle(stopStr, for: .normal)
 
@@ -72,8 +76,18 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Stop logging
         func stopLogging() {
 
+            // Stop updating location and heading
+            locationManager.stopUpdatingLocation()
+            locationManager.stopUpdatingHeading()
+
+            // Stop tracking user
+            locationMap.userTrackingMode = .none
+
             // Change button title
             sender.setTitle(startStr, for: .normal)
+
+            // Change location information text
+            locationData.text = NSLocalizedString("start_inst", comment: "Start instruction")
         }
 
         // Change logging status by button title

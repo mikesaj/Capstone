@@ -88,7 +88,6 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
 
             // Change button title
             sender.setTitle(stopStr, for: .normal)
-
         }
 
         // Stop logging
@@ -163,20 +162,19 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Make user route as polyline
         // Check the array has 2 elements to draw a line
         if (userLocations.count > 1) {
-            // Create coordinates from current and last location data
-            if let newCoordinate: CLLocationCoordinate2D = userLocations.last?.coordinate,
-               let oldCoordinate: CLLocationCoordinate2D = userLocations.first?.coordinate {
-                // Create coordinates array for MKPolyline
-                let coords = [newCoordinate, oldCoordinate]
-                // Create MKPolyline object from the specified set of coordinates
-                let polyline: MKPolyline = MKPolyline(coordinates: coords, count: coords.count)
+            // Create coordinates array for MKPolyline
+            var coords: Array<CLLocationCoordinate2D> = Array()
+            // Append two coordinates to the array
+            for location in userLocations { coords.append(location.coordinate) }
 
-                // Add the polyline as single overlay object to the map
-                locationMap.add(polyline)
+            // Create MKPolyline object from the specified set of coordinates
+            let polyline: MKPolyline = MKPolyline(coordinates: coords, count: coords.count)
 
-                // Remove the first element to limit size of the array
-                userLocations.removeFirst()
-            }
+            // Add the polyline as single overlay object to the map
+            locationMap.add(polyline)
+
+            // Remove the first element to limit size of the array
+            userLocations.removeFirst()
         }
     }
 

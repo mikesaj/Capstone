@@ -9,3 +9,7 @@
 // Start logging button
 "log_btn_start" = "Start";
 "log_btn_stop" = "Stop";
+
+// Instructions about button action
+"auth_inst" = "Please authorized the permission";
+"start_inst" = "Press right button to log path";

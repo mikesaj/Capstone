@@ -114,19 +114,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MapsViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgw-3F-Exq">
-                                <rect key="frame" x="110" y="323" width="154" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KFx-N5-wbf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mi3-31-l9P">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-DA-iyj">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="kxB-Dc-7DK"/>
+                                        </constraints>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="O3h-I0-jFC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Data Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94m-uN-MTi">
+                                        <rect key="frame" x="60" y="0.0" width="255" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJp-qM-U7q">
+                                        <rect key="frame" x="315" y="0.0" width="60" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Rzt-OH-uWs"/>
+                                        </constraints>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="logLocation:" destination="cVm-WB-wkq" eventType="touchUpInside" id="bf4-sM-d6f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c5e-DA-iyj" firstAttribute="top" secondItem="Mi3-31-l9P" secondAttribute="top" id="BZM-1P-E52"/>
+                                    <constraint firstAttribute="bottom" secondItem="c5e-DA-iyj" secondAttribute="bottom" id="ENc-WF-Khq"/>
+                                    <constraint firstAttribute="trailing" secondItem="MJp-qM-U7q" secondAttribute="trailing" id="Q6W-Bq-KeU"/>
+                                    <constraint firstAttribute="bottom" secondItem="MJp-qM-U7q" secondAttribute="bottom" id="Sxe-yZ-ovZ"/>
+                                    <constraint firstItem="MJp-qM-U7q" firstAttribute="top" secondItem="Mi3-31-l9P" secondAttribute="top" id="eKn-jD-S4u"/>
+                                    <constraint firstAttribute="height" constant="80" id="fCU-p7-RCa"/>
+                                    <constraint firstItem="c5e-DA-iyj" firstAttribute="leading" secondItem="Mi3-31-l9P" secondAttribute="leading" id="uJ4-U4-THB"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fgw-3F-Exq" firstAttribute="centerX" secondItem="llY-Ig-RoP" secondAttribute="centerX" id="ai0-3Q-MMa"/>
-                            <constraint firstItem="Fgw-3F-Exq" firstAttribute="centerY" secondItem="llY-Ig-RoP" secondAttribute="centerY" id="yP5-SK-Qrd"/>
+                            <constraint firstItem="KFx-N5-wbf" firstAttribute="top" secondItem="ViV-VQ-d4K" secondAttribute="bottom" id="6K4-TT-Blg"/>
+                            <constraint firstItem="KFx-N5-wbf" firstAttribute="leading" secondItem="llY-Ig-RoP" secondAttribute="leading" id="9Bp-5c-yrq"/>
+                            <constraint firstAttribute="trailing" secondItem="Mi3-31-l9P" secondAttribute="trailing" id="Ae0-ur-cBz"/>
+                            <constraint firstItem="Mi3-31-l9P" firstAttribute="top" secondItem="KFx-N5-wbf" secondAttribute="bottom" id="DwJ-8w-vu6"/>
+                            <constraint firstItem="Mi3-31-l9P" firstAttribute="leading" secondItem="llY-Ig-RoP" secondAttribute="leading" id="VHb-cx-1Fm"/>
+                            <constraint firstItem="y2z-dJ-Upg" firstAttribute="top" secondItem="Mi3-31-l9P" secondAttribute="bottom" id="VJR-6Q-CCc"/>
+                            <constraint firstAttribute="trailing" secondItem="KFx-N5-wbf" secondAttribute="trailing" id="rFe-Gu-sGQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationData" destination="94m-uN-MTi" id="KMA-7B-Bwi"/>
+                        <outlet property="locationMap" destination="KFx-N5-wbf" id="cic-pd-kNX"/>
+                        <outlet property="logLocation" destination="MJp-qM-U7q" id="7Ja-Cb-6FU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0L-ek-XOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,7 +17,6 @@
 		A9C655801E3EC4C8004ECCBD /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */; };
 		A9FB15231E3E956800A1EA91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB15221E3E956800A1EA91 /* MapKit.framework */; };
 		A9FB15251E3E957900A1EA91 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB15241E3E957900A1EA91 /* CoreLocation.framework */; };
-		A9FF80FA1E40246700417516 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A919916E1E37BC1100036F12 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +44,9 @@
 		A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A9FB15221E3E956800A1EA91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9FB15241E3E957900A1EA91 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A9FF81191E402FAF00417516 /* PlaceholderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderModel.swift; sourceTree = "<group>"; };
+		A9FF811B1E40300200417516 /* PlaceholderCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderCommon.swift; sourceTree = "<group>"; };
+		A9FF811D1E40303000417516 /* PlaceholderCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceholderCredential.swift; path = capstone/Config/Credentials/PlaceholderCredential.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		A944613F1E3FF3AF005CB938 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9FF81191E402FAF00417516 /* PlaceholderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 		A9FF80F71E4018D500417516 /* Credentials */ = {
 			isa = PBXGroup;
 			children = (
+				A9FF811D1E40303000417516 /* PlaceholderCredential.swift */,
 			);
 			path = Credentials;
 			sourceTree = "<group>";
@@ -195,6 +199,7 @@
 		A9FF80F81E401A1700417516 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A9FF811B1E40300200417516 /* PlaceholderCommon.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -292,7 +297,6 @@
 				A919916D1E37BC1100036F12 /* LaunchScreen.storyboard in Resources */,
 				A94461471E3FFB43005CB938 /* Localizable.strings in Resources */,
 				A919916A1E37BC1100036F12 /* Images.xcassets in Resources */,
-				A9FF80FA1E40246700417516 /* Info.plist in Resources */,
 				A91991681E37BC1100036F12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

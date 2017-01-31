@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991621E37BC1100036F12 /* AppDelegate.swift */; };
-		A91991651E37BC1100036F12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* ViewController.swift */; };
+		A91991651E37BC1100036F12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* MainViewController.swift */; };
 		A91991681E37BC1100036F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91991661E37BC1100036F12 /* Main.storyboard */; };
-		A919916A1E37BC1100036F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91991691E37BC1100036F12 /* Assets.xcassets */; };
+		A919916A1E37BC1100036F12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91991691E37BC1100036F12 /* Images.xcassets */; };
 		A919916D1E37BC1100036F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */; };
 		A91991781E37BC1100036F12 /* capstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991771E37BC1100036F12 /* capstoneTests.swift */; };
+		A94461471E3FFB43005CB938 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A94461491E3FFB43005CB938 /* Localizable.strings */; };
+		A9C655801E3EC4C8004ECCBD /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */; };
+		A9FB15231E3E956800A1EA91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB15221E3E956800A1EA91 /* MapKit.framework */; };
+		A9FB15251E3E957900A1EA91 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB15241E3E957900A1EA91 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +32,21 @@
 /* Begin PBXFileReference section */
 		A919915F1E37BC1100036F12 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91991621E37BC1100036F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A91991641E37BC1100036F12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A91991641E37BC1100036F12 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A91991671E37BC1100036F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A91991691E37BC1100036F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A91991691E37BC1100036F12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A919916C1E37BC1100036F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A919916E1E37BC1100036F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A91991731E37BC1100036F12 /* capstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91991771E37BC1100036F12 /* capstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capstoneTests.swift; sourceTree = "<group>"; };
 		A91991791E37BC1100036F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A94461481E3FFB43005CB938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		A9FB15221E3E956800A1EA91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A9FB15241E3E957900A1EA91 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A9FF81191E402FAF00417516 /* PlaceholderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderModel.swift; sourceTree = "<group>"; };
+		A9FF811B1E40300200417516 /* PlaceholderCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderCommon.swift; sourceTree = "<group>"; };
+		A9FF811D1E40303000417516 /* PlaceholderCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceholderCredential.swift; path = capstone/Config/Credentials/PlaceholderCredential.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FB15251E3E957900A1EA91 /* CoreLocation.framework in Frameworks */,
+				A9FB15231E3E956800A1EA91 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +75,7 @@
 				A91991611E37BC1100036F12 /* capstone */,
 				A91991761E37BC1100036F12 /* capstoneTests */,
 				A91991601E37BC1100036F12 /* Products */,
+				A9FB15211E3E956800A1EA91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +91,10 @@
 		A91991611E37BC1100036F12 /* capstone */ = {
 			isa = PBXGroup;
 			children = (
-				A91991621E37BC1100036F12 /* AppDelegate.swift */,
-				A91991641E37BC1100036F12 /* ViewController.swift */,
-				A91991661E37BC1100036F12 /* Main.storyboard */,
-				A91991691E37BC1100036F12 /* Assets.xcassets */,
-				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
-				A919916E1E37BC1100036F12 /* Info.plist */,
+				A944613F1E3FF3AF005CB938 /* Models */,
+				A944613C1E3FF2BB005CB938 /* Application */,
+				A94461401E3FF3EC005CB938 /* Assets */,
+				A94461441E3FF764005CB938 /* Config */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -94,6 +106,102 @@
 				A91991791E37BC1100036F12 /* Info.plist */,
 			);
 			path = capstoneTests;
+			sourceTree = "<group>";
+		};
+		A944613C1E3FF2BB005CB938 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF80F81E401A1700417516 /* Common */,
+				A944613D1E3FF2C9005CB938 /* Main */,
+				A944613E1E3FF344005CB938 /* Maps */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A944613D1E3FF2C9005CB938 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A91991621E37BC1100036F12 /* AppDelegate.swift */,
+				A91991641E37BC1100036F12 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A944613E1E3FF344005CB938 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				A9C6557F1E3EC4C8004ECCBD /* MapsViewController.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		A944613F1E3FF3AF005CB938 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF81191E402FAF00417516 /* PlaceholderModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A94461401E3FF3EC005CB938 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A94461431E3FF628005CB938 /* Storyboards */,
+				A91991691E37BC1100036F12 /* Images.xcassets */,
+				A94461421E3FF48E005CB938 /* Localization */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A94461421E3FF48E005CB938 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A94461491E3FFB43005CB938 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A94461431E3FF628005CB938 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A91991661E37BC1100036F12 /* Main.storyboard */,
+				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A94461441E3FF764005CB938 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A919916E1E37BC1100036F12 /* Info.plist */,
+				A9FF80F71E4018D500417516 /* Credentials */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A9FB15211E3E956800A1EA91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9FB15241E3E957900A1EA91 /* CoreLocation.framework */,
+				A9FB15221E3E956800A1EA91 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9FF80F71E4018D500417516 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF811D1E40303000417516 /* PlaceholderCredential.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		A9FF80F81E401A1700417516 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF811B1E40300200417516 /* PlaceholderCommon.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +256,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8JWW42NY8U;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A91991721E37BC1100036F12 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -182,7 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A919916D1E37BC1100036F12 /* LaunchScreen.storyboard in Resources */,
-				A919916A1E37BC1100036F12 /* Assets.xcassets in Resources */,
+				A94461471E3FFB43005CB938 /* Localizable.strings in Resources */,
+				A919916A1E37BC1100036F12 /* Images.xcassets in Resources */,
 				A91991681E37BC1100036F12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91991651E37BC1100036F12 /* ViewController.swift in Sources */,
+				A9C655801E3EC4C8004ECCBD /* MapsViewController.swift in Sources */,
+				A91991651E37BC1100036F12 /* MainViewController.swift in Sources */,
 				A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +354,14 @@
 				A919916C1E37BC1100036F12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A94461491E3FFB43005CB938 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A94461481E3FFB43005CB938 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -340,7 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8JWW42NY8U;
-				INFOPLIST_FILE = capstone/Info.plist;
+				INFOPLIST_FILE = capstone/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSD.capstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8JWW42NY8U;
-				INFOPLIST_FILE = capstone/Info.plist;
+				INFOPLIST_FILE = capstone/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSD.capstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +533,7 @@
 				A919917E1E37BC1100036F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A919917F1E37BC1100036F12 /* Build configuration list for PBXNativeTarget "capstoneTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +542,7 @@
 				A91991811E37BC1100036F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

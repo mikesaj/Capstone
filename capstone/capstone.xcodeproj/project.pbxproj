@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44332E501E41EFAB00C025AD /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44332E4F1E41EFAB00C025AD /* View1.swift */; };
+		44332E521E41EFE800C025AD /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44332E511E41EFE800C025AD /* View2.swift */; };
+		44332E541E41F01000C025AD /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44332E531E41F01000C025AD /* View3.swift */; };
 		444614D61E3CF8A9004BA91B /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444614D51E3CF8A9004BA91B /* UserLogin.swift */; };
 		444614D81E3D1383004BA91B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444614D71E3D1383004BA91B /* User.swift */; };
 		446D62621E3F15390096F378 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D62611E3F15390096F378 /* DashBoardController.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44332E4F1E41EFAB00C025AD /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		44332E511E41EFE800C025AD /* View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		44332E531E41F01000C025AD /* View3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
 		444614D51E3CF8A9004BA91B /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		444614D71E3D1383004BA91B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		446D62611E3F15390096F378 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		444614D41E3CF53D004BA91B /* UserAccountController */ = {
 			isa = PBXGroup;
 			children = (
+				A91991641E37BC1100036F12 /* LoginController.swift */,
 				444614D51E3CF8A9004BA91B /* UserLogin.swift */,
 				444614D71E3D1383004BA91B /* User.swift */,
 			);
@@ -111,11 +118,13 @@
 			children = (
 				443BD1891E3FECA400AE7DDE /* ViewControllers */,
 				A91991621E37BC1100036F12 /* AppDelegate.swift */,
-				A91991641E37BC1100036F12 /* LoginController.swift */,
 				A91991661E37BC1100036F12 /* Main.storyboard */,
 				A91991691E37BC1100036F12 /* Assets.xcassets */,
 				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
 				A919916E1E37BC1100036F12 /* Info.plist */,
+				44332E4F1E41EFAB00C025AD /* View1.swift */,
+				44332E511E41EFE800C025AD /* View2.swift */,
+				44332E531E41F01000C025AD /* View3.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -238,6 +247,9 @@
 				446D62621E3F15390096F378 /* DashBoardController.swift in Sources */,
 				A91991651E37BC1100036F12 /* LoginController.swift in Sources */,
 				444614D61E3CF8A9004BA91B /* UserLogin.swift in Sources */,
+				44332E541E41F01000C025AD /* View3.swift in Sources */,
+				44332E521E41EFE800C025AD /* View2.swift in Sources */,
+				44332E501E41EFAB00C025AD /* View1.swift in Sources */,
 				A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8JWW42NY8U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/capstone",
+				);
 				INFOPLIST_FILE = capstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSD.capstone;
@@ -389,6 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8JWW42NY8U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/capstone",
+				);
 				INFOPLIST_FILE = capstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSD.capstone;

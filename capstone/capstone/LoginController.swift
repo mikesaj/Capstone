@@ -9,11 +9,12 @@
 import UIKit
 
 class LoginController: UIViewController {
-
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
+    // FaceBook Button
+    @IBOutlet weak var fbButton: UIButton!
     
     @IBAction func loginAction(_ sender: UIButton) {
         
@@ -30,7 +31,7 @@ class LoginController: UIViewController {
         if (username_data.isEmpty) || (passowrd_data.isEmpty) {
             return
         }
-
+        
         let login = UserLogin( username: username_data, password: passowrd_data)
         
         if login.userLogin(loginType: "native") == true {
@@ -50,20 +51,21 @@ class LoginController: UIViewController {
     }
     
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    
 }
 

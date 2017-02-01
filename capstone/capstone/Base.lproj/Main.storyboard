@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fdr-x1-NE3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,18 +24,16 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-iT-WcR">
                                 <rect key="frame" x="51" y="190" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.9102909482758621" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28K-ri-IYd">
                                 <rect key="frame" x="51" y="233" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.9087553879310345" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTB-sC-zmL">
                                 <rect key="frame" x="44" y="447" width="282" height="30"/>
@@ -104,18 +102,19 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="fbButton" destination="JTB-sC-zmL" id="uyC-YS-Sdu"/>
                         <outlet property="passwordTextField" destination="28K-ri-IYd" id="c0v-I3-q90"/>
                         <outlet property="usernameTextField" destination="59Q-iT-WcR" id="X7t-AK-xwN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="-343" y="-38"/>
         </scene>
         <!--Dash Board Controller-->
         <scene sceneID="FmZ-1Y-cYm">
             <objects>
-                <viewController restorationIdentifier="DashBoardController" storyboardIdentifier="DashBoardController" id="Fdr-x1-NE3" customClass="DashBoardController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashBoardController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fdr-x1-NE3" customClass="DashBoardController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kEs-ca-0sy"/>
                         <viewControllerLayoutGuide type="bottom" id="hpu-3z-ch3"/>
@@ -124,20 +123,109 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-h8-3BL">
-                                <rect key="frame" x="144" y="101" width="160" height="21"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MQt-Eg-aNC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MQt-Eg-aNC" firstAttribute="width" secondItem="Xj6-Hf-o4W" secondAttribute="width" id="97H-pr-3WE"/>
+                            <constraint firstItem="MQt-Eg-aNC" firstAttribute="height" secondItem="Xj6-Hf-o4W" secondAttribute="height" id="OdU-yg-Bum"/>
+                            <constraint firstItem="MQt-Eg-aNC" firstAttribute="centerY" secondItem="Xj6-Hf-o4W" secondAttribute="centerY" id="mq1-gf-Uux"/>
+                            <constraint firstItem="MQt-Eg-aNC" firstAttribute="centerX" secondItem="Xj6-Hf-o4W" secondAttribute="centerX" id="vhS-FX-q0T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dashBoardScrollView" destination="MQt-Eg-aNC" id="SeZ-WS-R18"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAU-We-GBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="-38.23088455772114"/>
+        </scene>
+        <!--View1-->
+        <scene sceneID="eC5-t2-69J">
+            <objects>
+                <viewController storyboardIdentifier="V1" id="Bcn-d8-bM7" customClass="View1" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rSF-3m-dsg"/>
+                        <viewControllerLayoutGuide type="bottom" id="pQ3-Y1-g7S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bpx-uW-Kd0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quX-I7-pYp">
+                                <rect key="frame" x="163" y="321" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="quX-I7-pYp" firstAttribute="centerY" secondItem="Bpx-uW-Kd0" secondAttribute="centerY" id="By3-pa-qrO"/>
+                            <constraint firstItem="quX-I7-pYp" firstAttribute="centerX" secondItem="Bpx-uW-Kd0" secondAttribute="centerX" id="Tpz-er-Ox5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aY7-CX-Lwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="-343.17841079460271"/>
+        </scene>
+        <!--View2-->
+        <scene sceneID="Jlb-6A-4bH">
+            <objects>
+                <viewController storyboardIdentifier="V2" id="bqf-cu-QK8" customClass="View2" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xmK-d5-Er3"/>
+                        <viewControllerLayoutGuide type="bottom" id="51E-sQ-cjf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vrz-qz-LKs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exA-BA-NSw">
+                                <rect key="frame" x="145" y="323" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.60558894230000004" green="0.050894617420000003" blue="0.048325589299999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JAU-We-GBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GE0-hj-416" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-15.742128935532236"/>
+            <point key="canvasLocation" x="2009" y="-343"/>
+        </scene>
+        <!--View3-->
+        <scene sceneID="yVl-qy-dl0">
+            <objects>
+                <viewController storyboardIdentifier="V3" id="nNm-ST-rK8" customClass="View3" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RTd-aZ-Dkh"/>
+                        <viewControllerLayoutGuide type="bottom" id="uEs-KK-fvr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDg-Zo-a0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aN-Xq-CK7">
+                                <rect key="frame" x="148" y="323" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40757609569999997" blue="0.34244166929999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="io1-AU-VSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2680.8000000000002" y="-343.17841079460271"/>
         </scene>
     </scenes>
 </document>

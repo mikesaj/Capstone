@@ -13,6 +13,8 @@
 		444614D61E3CF8A9004BA91B /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444614D51E3CF8A9004BA91B /* UserLogin.swift */; };
 		444614D81E3D1383004BA91B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444614D71E3D1383004BA91B /* User.swift */; };
 		446D62621E3F15390096F378 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D62611E3F15390096F378 /* DashBoardController.swift */; };
+		44C8D1881E42F39100B007F2 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C8D1871E42F39100B007F2 /* SettingsController.swift */; };
+		44C8D18A1E436BCA00B007F2 /* SettingCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C8D1891E436BCA00B007F2 /* SettingCellController.swift */; };
 		A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991621E37BC1100036F12 /* AppDelegate.swift */; };
 		A91991651E37BC1100036F12 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* LoginController.swift */; };
 		A91991681E37BC1100036F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91991661E37BC1100036F12 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		444614D51E3CF8A9004BA91B /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		444614D71E3D1383004BA91B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		446D62611E3F15390096F378 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
+		44C8D1871E42F39100B007F2 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		44C8D1891E436BCA00B007F2 /* SettingCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCellController.swift; sourceTree = "<group>"; };
 		A919915F1E37BC1100036F12 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91991621E37BC1100036F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A91991641E37BC1100036F12 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				A91991641E37BC1100036F12 /* LoginController.swift */,
 				444614D51E3CF8A9004BA91B /* UserLogin.swift */,
 				444614D71E3D1383004BA91B /* User.swift */,
+				44C8D1871E42F39100B007F2 /* SettingsController.swift */,
+				44C8D1891E436BCA00B007F2 /* SettingCellController.swift */,
 			);
 			name = UserAccountController;
 			sourceTree = "<group>";
@@ -95,10 +101,67 @@
 			name = DashBoardController;
 			sourceTree = "<group>";
 		};
+		44C8D18B1E43772C00B007F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		44C8D18C1E43774200B007F2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A91991621E37BC1100036F12 /* AppDelegate.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		44C8D18D1E43776E00B007F2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A91991661E37BC1100036F12 /* Main.storyboard */,
+				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		44C8D18E1E4377B100B007F2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A91991691E37BC1100036F12 /* Assets.xcassets */,
+				44C8D18D1E43776E00B007F2 /* Storyboards */,
+			);
+			name = Assets;
+			path = capstone;
+			sourceTree = "<group>";
+		};
+		44C8D18F1E43781C00B007F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44332E4F1E41EFAB00C025AD /* View1.swift */,
+				44332E511E41EFE800C025AD /* View2.swift */,
+				44332E531E41F01000C025AD /* View3.swift */,
+			);
+			name = Models;
+			path = capstone;
+			sourceTree = "<group>";
+		};
+		44C8D1901E43783800B007F2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A919916E1E37BC1100036F12 /* Info.plist */,
+			);
+			name = Config;
+			path = capstone;
+			sourceTree = "<group>";
+		};
 		A91991561E37BC1000036F12 = {
 			isa = PBXGroup;
 			children = (
-				A91991611E37BC1100036F12 /* capstone */,
+				A91991611E37BC1100036F12 /* Application */,
+				44C8D18F1E43781C00B007F2 /* Models */,
+				44C8D18E1E4377B100B007F2 /* Assets */,
+				44C8D1901E43783800B007F2 /* Config */,
 				A91991761E37BC1100036F12 /* capstoneTests */,
 				A91991601E37BC1100036F12 /* Products */,
 			);
@@ -113,19 +176,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A91991611E37BC1100036F12 /* capstone */ = {
+		A91991611E37BC1100036F12 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				44C8D18B1E43772C00B007F2 /* Common */,
+				44C8D18C1E43774200B007F2 /* Main */,
 				443BD1891E3FECA400AE7DDE /* ViewControllers */,
-				A91991621E37BC1100036F12 /* AppDelegate.swift */,
-				A91991661E37BC1100036F12 /* Main.storyboard */,
-				A91991691E37BC1100036F12 /* Assets.xcassets */,
-				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
-				A919916E1E37BC1100036F12 /* Info.plist */,
-				44332E4F1E41EFAB00C025AD /* View1.swift */,
-				44332E511E41EFE800C025AD /* View2.swift */,
-				44332E531E41F01000C025AD /* View3.swift */,
 			);
+			name = Application;
 			path = capstone;
 			sourceTree = "<group>";
 		};
@@ -243,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C8D18A1E436BCA00B007F2 /* SettingCellController.swift in Sources */,
+				44C8D1881E42F39100B007F2 /* SettingsController.swift in Sources */,
 				444614D81E3D1383004BA91B /* User.swift in Sources */,
 				446D62621E3F15390096F378 /* DashBoardController.swift in Sources */,
 				A91991651E37BC1100036F12 /* LoginController.swift in Sources */,

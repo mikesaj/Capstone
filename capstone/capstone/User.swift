@@ -21,7 +21,7 @@ class User {
     // User preference to store user login state
     let user_session_data = UserDefaults.standard
     
-    
+    // get logged-in user
     func get_Currt_User() {
         
         let userLogin2 = UserLogin()

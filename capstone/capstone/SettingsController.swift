@@ -11,7 +11,7 @@ import UIKit
 class SettingsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-    
+    // Declares a table view in the update profile layout-view
     @IBOutlet weak var tableView: UITableView!
     
     // table elemets
@@ -36,6 +36,7 @@ class SettingsController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = UITableViewCell()
         
         // get table cell title by row id

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DashBoardController: UIViewController {
+class DashBoardViewController: UIViewController {
     
     @IBOutlet weak var dashBoardScrollView: UIScrollView!
 

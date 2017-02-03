@@ -12,11 +12,12 @@
 		44332E541E41F01000C025AD /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44332E531E41F01000C025AD /* View3.swift */; };
 		444614D61E3CF8A9004BA91B /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444614D51E3CF8A9004BA91B /* UserLogin.swift */; };
 		444614D81E3D1383004BA91B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444614D71E3D1383004BA91B /* User.swift */; };
-		446D62621E3F15390096F378 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D62611E3F15390096F378 /* DashBoardController.swift */; };
+		446D62621E3F15390096F378 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D62611E3F15390096F378 /* DashBoardViewController.swift */; };
 		44C8D1881E42F39100B007F2 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C8D1871E42F39100B007F2 /* SettingsController.swift */; };
 		44C8D18A1E436BCA00B007F2 /* SettingCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C8D1891E436BCA00B007F2 /* SettingCellController.swift */; };
+		44C8D1921E44CFC900B007F2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C8D1911E44CFC900B007F2 /* CreateAccountViewController.swift */; };
 		A91991631E37BC1100036F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991621E37BC1100036F12 /* AppDelegate.swift */; };
-		A91991651E37BC1100036F12 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* LoginController.swift */; };
+		A91991651E37BC1100036F12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91991641E37BC1100036F12 /* LoginViewController.swift */; };
 		A91991681E37BC1100036F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91991661E37BC1100036F12 /* Main.storyboard */; };
 		A919916A1E37BC1100036F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91991691E37BC1100036F12 /* Assets.xcassets */; };
 		A919916D1E37BC1100036F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */; };
@@ -39,12 +40,13 @@
 		44332E531E41F01000C025AD /* View3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
 		444614D51E3CF8A9004BA91B /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		444614D71E3D1383004BA91B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		446D62611E3F15390096F378 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
+		446D62611E3F15390096F378 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		44C8D1871E42F39100B007F2 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		44C8D1891E436BCA00B007F2 /* SettingCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCellController.swift; sourceTree = "<group>"; };
+		44C8D1911E44CFC900B007F2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		A919915F1E37BC1100036F12 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91991621E37BC1100036F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A91991641E37BC1100036F12 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A91991641E37BC1100036F12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A91991671E37BC1100036F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A91991691E37BC1100036F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A919916C1E37BC1100036F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,64 +77,39 @@
 		443BD1891E3FECA400AE7DDE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A91991621E37BC1100036F12 /* AppDelegate.swift */,
+				444614D41E3CF53D004BA91B /* AccountController */,
 				446D625C1E3F05400096F378 /* DashBoardController */,
-				444614D41E3CF53D004BA91B /* UserAccountController */,
+				44C8D1941E44DC4500B007F2 /* SettingsViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		444614D41E3CF53D004BA91B /* UserAccountController */ = {
+		444614D41E3CF53D004BA91B /* AccountController */ = {
 			isa = PBXGroup;
 			children = (
-				A91991641E37BC1100036F12 /* LoginController.swift */,
+				44C8D1931E44D07800B007F2 /* CreateAccountController */,
+				A91991641E37BC1100036F12 /* LoginViewController.swift */,
 				444614D51E3CF8A9004BA91B /* UserLogin.swift */,
 				444614D71E3D1383004BA91B /* User.swift */,
-				44C8D1871E42F39100B007F2 /* SettingsController.swift */,
-				44C8D1891E436BCA00B007F2 /* SettingCellController.swift */,
 			);
-			name = UserAccountController;
+			name = AccountController;
 			sourceTree = "<group>";
 		};
 		446D625C1E3F05400096F378 /* DashBoardController */ = {
 			isa = PBXGroup;
 			children = (
-				446D62611E3F15390096F378 /* DashBoardController.swift */,
+				446D62611E3F15390096F378 /* DashBoardViewController.swift */,
 			);
 			name = DashBoardController;
-			sourceTree = "<group>";
-		};
-		44C8D18B1E43772C00B007F2 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		44C8D18C1E43774200B007F2 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				A91991621E37BC1100036F12 /* AppDelegate.swift */,
-			);
-			name = Main;
-			sourceTree = "<group>";
-		};
-		44C8D18D1E43776E00B007F2 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				A91991661E37BC1100036F12 /* Main.storyboard */,
-				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
-			);
-			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		44C8D18E1E4377B100B007F2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				A91991691E37BC1100036F12 /* Assets.xcassets */,
-				44C8D18D1E43776E00B007F2 /* Storyboards */,
 			);
 			name = Assets;
-			path = capstone;
 			sourceTree = "<group>";
 		};
 		44C8D18F1E43781C00B007F2 /* Models */ = {
@@ -143,7 +120,6 @@
 				44332E531E41F01000C025AD /* View3.swift */,
 			);
 			name = Models;
-			path = capstone;
 			sourceTree = "<group>";
 		};
 		44C8D1901E43783800B007F2 /* Config */ = {
@@ -152,16 +128,29 @@
 				A919916E1E37BC1100036F12 /* Info.plist */,
 			);
 			name = Config;
-			path = capstone;
+			sourceTree = "<group>";
+		};
+		44C8D1931E44D07800B007F2 /* CreateAccountController */ = {
+			isa = PBXGroup;
+			children = (
+				44C8D1911E44CFC900B007F2 /* CreateAccountViewController.swift */,
+			);
+			name = CreateAccountController;
+			sourceTree = "<group>";
+		};
+		44C8D1941E44DC4500B007F2 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44C8D1871E42F39100B007F2 /* SettingsController.swift */,
+				44C8D1891E436BCA00B007F2 /* SettingCellController.swift */,
+			);
+			name = SettingsViewController;
 			sourceTree = "<group>";
 		};
 		A91991561E37BC1000036F12 = {
 			isa = PBXGroup;
 			children = (
 				A91991611E37BC1100036F12 /* Application */,
-				44C8D18F1E43781C00B007F2 /* Models */,
-				44C8D18E1E4377B100B007F2 /* Assets */,
-				44C8D1901E43783800B007F2 /* Config */,
 				A91991761E37BC1100036F12 /* capstoneTests */,
 				A91991601E37BC1100036F12 /* Products */,
 			);
@@ -179,9 +168,12 @@
 		A91991611E37BC1100036F12 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				44C8D18B1E43772C00B007F2 /* Common */,
-				44C8D18C1E43774200B007F2 /* Main */,
 				443BD1891E3FECA400AE7DDE /* ViewControllers */,
+				44C8D18F1E43781C00B007F2 /* Models */,
+				44C8D18E1E4377B100B007F2 /* Assets */,
+				44C8D1901E43783800B007F2 /* Config */,
+				A91991661E37BC1100036F12 /* Main.storyboard */,
+				A919916B1E37BC1100036F12 /* LaunchScreen.storyboard */,
 			);
 			name = Application;
 			path = capstone;
@@ -301,11 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C8D1921E44CFC900B007F2 /* CreateAccountViewController.swift in Sources */,
 				44C8D18A1E436BCA00B007F2 /* SettingCellController.swift in Sources */,
 				44C8D1881E42F39100B007F2 /* SettingsController.swift in Sources */,
 				444614D81E3D1383004BA91B /* User.swift in Sources */,
-				446D62621E3F15390096F378 /* DashBoardController.swift in Sources */,
-				A91991651E37BC1100036F12 /* LoginController.swift in Sources */,
+				446D62621E3F15390096F378 /* DashBoardViewController.swift in Sources */,
+				A91991651E37BC1100036F12 /* LoginViewController.swift in Sources */,
 				444614D61E3CF8A9004BA91B /* UserLogin.swift in Sources */,
 				44332E541E41F01000C025AD /* View3.swift in Sources */,
 				44332E521E41EFE800C025AD /* View2.swift in Sources */,

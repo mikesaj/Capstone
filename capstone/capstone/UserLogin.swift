@@ -8,10 +8,11 @@
 //
 
 import Foundation
-
-/**
- This class manages the user login sessions
-**/
+/*
+ *
+ *   This class manages the user login sessions
+ *
+ */
 
 class UserLogin {
     
@@ -52,51 +53,55 @@ class UserLogin {
         // check if login form labels are empty
         if self.username.isEmpty || self.password.isEmpty { return false }
         
-        var curr_user: String
+        var currUser: String
         
         // Switch staement to determine the service used to log-in to the app
         switch loginType {
             
             case "native" :
-                curr_user = native_Login()
+                currUser = nativeLogin()
             case "facebook" :
-                curr_user = faceBook_Login()
+                currUser = faceBookLogin()
             case "google" :
-                curr_user = google_Login()
+                currUser = googleLogin()
             default:
                 return false
         }
         
-        if curr_user.isEmpty{
+        if currUser.isEmpty{
             return false
         }
         
         // logged-in user data is stored in the userdefault (prefence store) as the user session values
         // The current data is a dummy
-        user_session.set(curr_user, forKey: "username")
+        user_session.set(currUser,   forKey: "username")
         user_session.set("Waterloo", forKey: "city")
-        user_session.set("Canada", forKey: "country")
+        user_session.set("Canada",   forKey: "country")
     
         return true
     }
     
     // Account created directly from our signup database
     // returns username
-    func native_Login() -> String {
+    func nativeLogin() -> String {
+        
+        print(username)
+        print(password)
+        
         //<#function body#>
         return username
     }
     
     // Account created through "Facebook Login API"
     // returns username
-    func faceBook_Login() -> String {
+    func faceBookLogin() -> String {
         //<#function body#>
         return username
     }
     
     // Account created through "Google Login API"
     // returns username
-    func google_Login() -> String {
+    func googleLogin() -> String {
         //<#function body#>
         return username
     }

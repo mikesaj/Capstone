@@ -15,22 +15,22 @@ class User {
     var city: String? = nil
     var country: String? = nil
     var LatestGpsCordinate: [String: Float32] = [:]
-    var fitnest_groups_id: [Int : Int] = [:]
+    var fitnestGroupsId: [Int : Int] = [:]
 
     
     // User preference to store user login state
-    let user_session_data = UserDefaults.standard
+    let userSessionData = UserDefaults.standard
     
     // get logged-in user
-    func get_Currt_User() {
+    func getCurrtUser() {
         
         let userLogin2 = UserLogin()
-        let login_status = userLogin2.isUserLoggedIn()
+        let loginStatus = userLogin2.isUserLoggedIn()
         
-        if login_status == false {
+        if loginStatus == false {
             
             // open new layout view
-            get_Currt_User()
+            getCurrtUser()
             return
         }
     }
